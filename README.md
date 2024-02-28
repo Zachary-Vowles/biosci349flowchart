@@ -1,4 +1,4 @@
-For biosci 349 - microbiology. Can and must only use the following tests to identify the following species. Done in collaboration with Micol.
+For biosci 349 - microbiology. Must  use the following tests to identify the following species. Done in collaboration with Micol. Special testing must be done for some particular species like Corynebacterium, and Mycobacteria.
 Aeromonas spp.
 Bacillus cereus
 Bacillus subtilis
