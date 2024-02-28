@@ -11,7 +11,7 @@ Cocci catalase test -> Positive (CC)
 Cocci catalase test -> Negative (CC)
 Positive (CC) -> Coagulase test (CC)
 
-#micol 14-16
+# micol 14-16
 Coagulase test (CC) -> Positive (Coagulase)
 Coagulase test (CC) -> Negative (Coagulase)
 Positive (Coagulase) -> Mannitol Salt Agar (MSA)
@@ -39,11 +39,13 @@ Horse Blood Agar (HBAcc) -> HBA beta-hemolytic
 HBA beta-hemolytic -> Bacitracin sensitivity
 Bacitracin sensitivity -> Sensitive to bacitracin
 Bacitracin sensitivity -> Resistant to bacitracin
-Resistant to bacitracin -> Group B/C Streptoccocus 
+Resistant to bacitracin -> Group B/C Streptoccocus
 
 Sensitive to bacitracin -> Streptococcus pyogenes: finalized species
 Streptococcus pyogenes: {tooltip: confirm with Streptococcus grouping test}
 Streptococcus pyogenes.shape: diamond
+
+Horse Blood Agar (HBAcc): {tooltip: This step is just confirmatory, and can be skipped}
 
 Mannitol Salt Agar (MSA) (CC) -> No growth + no colour change (MSAcc)
 No growth + no colour change (MSAcc) -> Enterococcus faecium: finalized shape
@@ -65,16 +67,25 @@ Streptococcus mitis.shape: diamond
 
 G+ rods -> Endospore formation
 Endospore formation -> Negative (REf)
+
+Negative (REf) -> Motility test (wet mount)
+Motility test (wet mount) -> Non-motile (RMt)
+Motility test (wet mount) -> Motile (RMt) 
+
+Non-motile (RMt) -> Corynebacterium spp: finalized species
+Motile (RMt) -> Listeria monocytogenes: finalized species
+
 Endospore formation -> Positive (REf)
 Positive (REf) -> Rod catalase test
-Negative (REf) -> Listeria monocytogenes: finalized species
+
+Negative (REf) -> Corynebacterium
 Listeria monocytogenes.shape: diamond
 
 Rod catalase test -> Positive (RC)
 Rod catalase test -> Negative (RC)
 
-Positive (RC) -> Motility test (wet mount)
-Motility test (wet mount) -> Motile (RMt) -> Mannitol-Egg-Yolk-Polymyxin (MYP) agar
+
+Positive (RC) -> Mannitol-Egg-Yolk-Polymyxin (MYP) agar
 Mannitol-Egg-Yolk-Polymyxin (MYP) agar -> Pink colonies
 Pink colonies -> Bacillus cereus: finalized species
 Mannitol-Egg-Yolk-Polymyxin (MYP) agar -> Yellow colonies
@@ -83,8 +94,7 @@ Yellow colonies -> Bacillus subtilis: finalized species
 Bacillus cereus.shape: diamond
 Bacillus subtilis.shape: diamond
 
-Motility test (wet mount) -> Non-motile (RMt)
-Non-motile (RMt) -> Corynebacterium spp: finalized species
+
 
 Corynebacterium spp: {tooltip: These can potentially be more easily identified by their club-shape, but we aren't experienced microbiologists, hence the caution}
 Corynebacterium spp.shape: diamond
