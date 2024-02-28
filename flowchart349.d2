@@ -45,12 +45,26 @@ Listeria monocytogenes.shape: diamond
 
 Rod Catalase Test -> Positive (RC)
 Rod Catalase Test -> Negative (RC)
-Positive (RC) -> Coagulase test (RCg)
-Negative (RC) -> Clostridium spp
 
-Coagulase test (RCg) -> Negative (RCg)
-Coagulase test (RCg) -> Positive (RCg)
-Negative (RCg) -> Corynebacterium spp: finalized species
+
+
+
+Positive (RC) -> Motility test (wet mount)
+Motility test (wet mount) -> Motile (RMt) -> Mannitol-Egg-Yolk-Polymyxin (MYP) agar
+Mannitol-Egg-Yolk-Polymyxin (MYP) agar -> Pink colonies
+Pink colonies -> Bacillus cereus: finalized species
+Mannitol-Egg-Yolk-Polymyxin (MYP) agar -> Yellow colonies
+Yellow colonies -> Bacillus subtilis: finalized species
+
+Bacillus cereus.shape: diamond
+Bacillus subtilis.shape: diamond
+
+Motility test (wet mount) -> Non-motile (RMt)
+Non-motile (RMt) -> Corynebacterium spp: finalized species
+
+Corynebacterium spp: {tooltip: These can potentially be more easily identified by their club-shape, but we aren't experienced microbiologists, hence the caution}
 Corynebacterium spp.shape: diamond
 
-ENDOSPORE FORMATION FOR ROD + for catalase
+
+Negative (RC) -> Clostridium spp: finalized species
+Clostridium spp.shape: diamond
