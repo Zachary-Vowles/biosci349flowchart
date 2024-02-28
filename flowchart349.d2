@@ -24,10 +24,26 @@ Novobiocin sensitive -> Staphylococcus epidermidis: finalized species
 Staphylococcus epidermidis.shape: diamond
 Novobiocin resistant -> Staphylococcus saprophyticus: finalized species
 Staphylococcus saprophyticus.shape: diamond
-Negative (CC) -> Horse Blood Agar (HBA)
-Horse Blood Agar (HBA) -> HBA alpha-hemolytic
-Horse Blood Agar (HBA) -> HBA beta-hemolytic
-Horse Blood Agar (HBA) -> HBA gamma non-hemolytic
+
+Negative (CC) -> Bile Esculin Agar (CC) 
+Bile Esculin Agar (CC) -> Growth and esculin hydrolysis (BEcc)
+Bile Esculin Agar (CC) -> No growth and esculin hydrolysis (BEcc)
+Growth and esculin hydrolysis (BEcc) -> Mannitol Salt Agar (MSA) (CC)
+No Growth and esculin hydrolysis (BEcc) -> Horse Blood Agar (HBAcc)
+Horse Blood Agar (HBAcc) -> HBA alpha-hemolytic
+
+Horse Blood Agar (HBAcc): {tooltip: This step is just confirmatory, and can be skipped}
+
+Mannitol Salt Agar (MSA) (CC) -> No growth + no colour change (MSAcc)
+No growth + no colour change (MSAcc) -> Enteroccocus faecium: finalized shape
+Enteroccocus faecium.shape: diamond
+
+Mannitol Salt Agar (MSA) (CC): {tooltip: E. faecalis can grow on mannitol salt agar and ferment mannitol, while E. faecium lacks these phenotypes. Sourced from https://link.springer.com/article/10.1007/s11515-012-1183-5}
+
+Mannitol Salt Agar (MSA) (CC) -> Yellow + Growth (MSAcc) 
+Yellow + growth (MSAcc) -> Enterococcus faecalis: finalized species
+Enterococcus faecalis.shape: diamond
+
 HBA alpha-hemolytic -> Optochin sensitivity test
 Optochin sensitivity test -> Optochin sensitive
 Optochin sensitivity test -> Optochin resistant
@@ -36,7 +52,7 @@ Streptococcus pneumoniae.shape: diamond
 Optochin resistant -> Streptococcus mitis: finalized species
 Streptococcus mitis.shape: diamond
 
-G+ Rods -> Endospore formation
+G+ Rods -> Endospore formation 
 Endospore formation -> Negative (REf)
 Endospore formation -> Positive (REf)
 Positive (REf) -> Rod Catalase Test
@@ -46,15 +62,13 @@ Listeria monocytogenes.shape: diamond
 Rod Catalase Test -> Positive (RC)
 Rod Catalase Test -> Negative (RC)
 
-
-
-
 Positive (RC) -> Motility test (wet mount)
 Motility test (wet mount) -> Motile (RMt) -> Mannitol-Egg-Yolk-Polymyxin (MYP) agar
 Mannitol-Egg-Yolk-Polymyxin (MYP) agar -> Pink colonies
 Pink colonies -> Bacillus cereus: finalized species
 Mannitol-Egg-Yolk-Polymyxin (MYP) agar -> Yellow colonies
-Yellow colonies -> Bacillus subtilis: finalized species
+Yellow colonies -> Bacillus subtilis: finalized species 
+
 
 Bacillus cereus.shape: diamond
 Bacillus subtilis.shape: diamond
