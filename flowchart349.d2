@@ -10,6 +10,31 @@ G+ Cocci -> Cocci Catalase Test
 Cocci Catalase Test -> Positive (CC)
 Cocci Catalase Test -> Negative (CC)
 Positive (CC) -> Coagulase test (CC)
+# #micol 14-16
+Coagulase test (CC) -> Positive (Coagulase)
+Coagulase test (CC) -> Negative (Coagulase)
+Positive (Coagulase) -> Mannitol Salt Agar (MSA)
+Mannitol Salt Agar (MSA) -> Growth in MSA
+Growth in MSA -> Staphylococcus aureus: finalized species
+Staphylococcus aureus.shape: diamond
+Negative (Coagulase) -> Novobiocin sensitivity test
+Novobiocin sensitivity test -> Novobiocin sensitive
+Novobiocin sensitivity test -> Novobiocin resistant
+Novobiocin sensitive -> Staphylococcus epidermidis: finalized species
+Staphylococcus epidermidis.shape: diamond
+Novobiocin resistant -> Staphylococcus saprophyticus: finalized species
+Staphylococcus saprophyticus.shape: diamond
+Negative (CC) -> Horse Blood Agar (HBA)
+Horse Blood Agar (HBA) -> HBA alpha-hemolytic
+Horse Blood Agar (HBA) -> HBA beta-hemolytic
+Horse Blood Agar (HBA) -> HBA gamma non-hemolytic
+HBA alpha-hemolytic -> Optochin sensitivity test
+Optochin sensitivity test -> Optochin sensitive
+Optochin sensitivity test -> Optochin resistant
+Optochin sensitive -> Streptococcus pneumoniae: finalized species
+Streptococcus pneumoniae.shape: diamond
+Optochin resistant -> Streptococcus mitis: finalized species
+Streptococcus mitis.shape: diamond
 
 G+ Rods -> Endospore formation
 Endospore formation -> Negative (REf)
@@ -20,27 +45,12 @@ Listeria monocytogenes.shape: diamond
 
 Rod Catalase Test -> Positive (RC)
 Rod Catalase Test -> Negative (RC)
-Positive (RC) -> Motility test (wet mount)
-Motility test (wet mount) -> Motile (RMt) -> Mannitol-Egg-Yolk-Polymyxin (MYP) agar
-Mannitol-Egg-Yolk-Polymyxin (MYP) agar -> Pink colonies
-Pink colonies -> Bacillus cereus: finalized species
-Mannitol-Egg-Yolk-Polymyxin (MYP) agar -> Yellow colonies
-Yellow colonies -> Bacillus subtilis: finalized species
+Positive (RC) -> Coagulase test (RCg)
+Negative (RC) -> Clostridium spp
 
-Bacillus cereus.shape: diamond
-Bacillus subtilis.shape: diamond
-
-Motility test (wet mount) -> Non-motile (RMt)
-Non-motile (RMt) -> Corynebacterium spp: finalized species
-
+Coagulase test (RCg) -> Negative (RCg)
+Coagulase test (RCg) -> Positive (RCg)
+Negative (RCg) -> Corynebacterium spp: finalized species
 Corynebacterium spp.shape: diamond
-Corynebacterium spp: {tooltip: These can potentially be more easily identified by their club-shape, but we aren't experienced microbiologists, hence the caution}
 
-
-Negative (RC) -> Clostridium spp: finalized species
-Clostridium spp.shape: diamond
-
-
-
-
-
+ENDOSPORE FORMATION FOR ROD + for catalase
