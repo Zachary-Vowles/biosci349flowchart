@@ -1,4 +1,4 @@
-For biosci 349 - microbiology. Can and must only use the following tests to identify the following species.
+For biosci 349 - microbiology. Can and must only use the following tests to identify the following species. Done in collaboration with Micol.
 Aeromonas spp.
 Bacillus cereus
 Bacillus subtilis
