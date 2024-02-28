@@ -1,16 +1,17 @@
 Samples -> Gram stain (+/-)
 Gram stain (+/-) -> Gram negative
 Gram stain (+/-) -> Gram positive
-Gram positive -> G+ Cocci
-Gram positive -> G+ Rods
-Gram negative -> G- Cocci
-Gram negative -> G- Rods
+Gram positive -> G+ cocci
+Gram positive -> G+ rods
+Gram negative -> G- cocci
+Gram negative -> G- rods
 
-G+ Cocci -> Cocci Catalase Test
-Cocci Catalase Test -> Positive (CC)
-Cocci Catalase Test -> Negative (CC)
+G+ cocci -> Cocci catalase test
+Cocci catalase test -> Positive (CC)
+Cocci catalase test -> Negative (CC)
 Positive (CC) -> Coagulase test (CC)
-# #micol 14-16
+
+#micol 14-16
 Coagulase test (CC) -> Positive (Coagulase)
 Coagulase test (CC) -> Negative (Coagulase)
 Positive (Coagulase) -> Mannitol Salt Agar (MSA)
@@ -25,22 +26,34 @@ Staphylococcus epidermidis.shape: diamond
 Novobiocin resistant -> Staphylococcus saprophyticus: finalized species
 Staphylococcus saprophyticus.shape: diamond
 
-Negative (CC) -> Bile Esculin Agar (CC) 
-Bile Esculin Agar (CC) -> Growth and esculin hydrolysis (BEcc)
-Bile Esculin Agar (CC) -> No growth and esculin hydrolysis (BEcc)
+Negative (CC) -> Bile esculin agar (CC)
+
+Bile esculin agar (CC): {tooltip: Only group D streptoccocus and enterococci can hydrolyze esculin, sourced from https://www.sciencedirect.com/science/article/abs/pii/B9780750601870500079 and confirmation via "https://microbenotes.com/streptococcus-mitis}
+
+Bile esculin agar (CC) -> Growth and esculin hydrolysis (BEcc)
+Bile esculin agar (CC) -> No esculin hydrolysis (no blackening) (BEcc)
 Growth and esculin hydrolysis (BEcc) -> Mannitol Salt Agar (MSA) (CC)
-No Growth and esculin hydrolysis (BEcc) -> Horse Blood Agar (HBAcc)
+No esculin hydrolysis (no blackening) (BEcc) -> Horse Blood Agar (HBAcc)
 Horse Blood Agar (HBAcc) -> HBA alpha-hemolytic
+Horse Blood Agar (HBAcc) -> HBA beta-hemolytic
+HBA beta-hemolytic -> Bacitracin sensitivity
+Bacitracin sensitivity -> Sensitive to bacitracin
+Bacitracin sensitivity -> Resistant to bacitracin
+Resistant to bacitracin -> Group B/C Streptoccocus 
+
+Sensitive to bacitracin -> Streptococcus pyogenes: finalized species
+Streptococcus pyogenes: {tooltip: confirm with Streptococcus grouping test}
+Streptococcus pyogenes.shape: diamond
 
 Horse Blood Agar (HBAcc): {tooltip: This step is just confirmatory, and can be skipped}
 
 Mannitol Salt Agar (MSA) (CC) -> No growth + no colour change (MSAcc)
-No growth + no colour change (MSAcc) -> Enteroccocus faecium: finalized shape
-Enteroccocus faecium.shape: diamond
+No growth + no colour change (MSAcc) -> Enterococcus faecium: finalized shape
+Enterococcus faecium.shape: diamond
 
 Mannitol Salt Agar (MSA) (CC): {tooltip: E. faecalis can grow on mannitol salt agar and ferment mannitol, while E. faecium lacks these phenotypes. Sourced from https://link.springer.com/article/10.1007/s11515-012-1183-5}
 
-Mannitol Salt Agar (MSA) (CC) -> Yellow + Growth (MSAcc) 
+Mannitol Salt Agar (MSA) (CC) -> Yellow + growth (MSAcc)
 Yellow + growth (MSAcc) -> Enterococcus faecalis: finalized species
 Enterococcus faecalis.shape: diamond
 
@@ -52,23 +65,22 @@ Streptococcus pneumoniae.shape: diamond
 Optochin resistant -> Streptococcus mitis: finalized species
 Streptococcus mitis.shape: diamond
 
-G+ Rods -> Endospore formation 
+G+ rods -> Endospore formation
 Endospore formation -> Negative (REf)
 Endospore formation -> Positive (REf)
-Positive (REf) -> Rod Catalase Test
+Positive (REf) -> Rod catalase test
 Negative (REf) -> Listeria monocytogenes: finalized species
 Listeria monocytogenes.shape: diamond
 
-Rod Catalase Test -> Positive (RC)
-Rod Catalase Test -> Negative (RC)
+Rod catalase test -> Positive (RC)
+Rod catalase test -> Negative (RC)
 
 Positive (RC) -> Motility test (wet mount)
 Motility test (wet mount) -> Motile (RMt) -> Mannitol-Egg-Yolk-Polymyxin (MYP) agar
 Mannitol-Egg-Yolk-Polymyxin (MYP) agar -> Pink colonies
 Pink colonies -> Bacillus cereus: finalized species
 Mannitol-Egg-Yolk-Polymyxin (MYP) agar -> Yellow colonies
-Yellow colonies -> Bacillus subtilis: finalized species 
-
+Yellow colonies -> Bacillus subtilis: finalized species
 
 Bacillus cereus.shape: diamond
 Bacillus subtilis.shape: diamond
@@ -78,7 +90,6 @@ Non-motile (RMt) -> Corynebacterium spp: finalized species
 
 Corynebacterium spp: {tooltip: These can potentially be more easily identified by their club-shape, but we aren't experienced microbiologists, hence the caution}
 Corynebacterium spp.shape: diamond
-
 
 Negative (RC) -> Clostridium spp: finalized species
 Clostridium spp.shape: diamond
