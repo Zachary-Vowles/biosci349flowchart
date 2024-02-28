@@ -1,4 +1,46 @@
-For biosci 349 - microbiology. Can only, and must use the following tests.
+For biosci 349 - microbiology. Can and must only use the following tests to identify the following species.
+Aeromonas spp.
+Bacillus cereus
+Bacillus subtilis
+Candida albicans
+Candida glabrata
+Campylobacter jejuni
+Citrobacter freundii
+Corynebacterium spp.
+Clostridium spp.
+Escherichia coli
+Enterobacter spp.
+Enterococcus feacalis
+Enterococcus faecium
+Helicobacter pylori
+Hemophilus influenzae
+Klebsiella oxytoca
+Listeria monocytogenes
+Moraxella cattharalis
+Neisseria meningitidis
+Neisseria gonorrhoeae
+Mycobacterium tuberculosis
+Mycobacterium leprae
+Proteus mirabilis
+Pseudomonas aeruginosa
+Staphylococcus aureus
+Staphylococcus epidermidis
+Staphylococcus saprophyticus
+Streptococcus pyogenes (group A
+streptococcus)
+Streptococcus agalactiae (group B
+streptococcus)
+Streptococcus dysgalactiae (group C
+streptococcus)
+Streptococcus pneumoniae
+Streptococcus mitis
+Serratia marcescens
+Salmonella enterica
+Shigella dysenteriae
+Vibrio cholerae
+Vibrio fischeri
+Yersinia spp.
+
 
 ### Agar Plates
 - **Nutrient agar**
