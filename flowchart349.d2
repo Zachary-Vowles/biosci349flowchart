@@ -1,3 +1,39 @@
+Checklist: {
+Tests: |md
+ # Used biochemical tests
+- Oxidase test
+- Catalase test
+- Coagulase test   
+- XXXXXXX  Urease test
+- XXXXXXX Capsule stain
+- XXXXXXX Germ tube test
+- Antibiotic discs (Bacitracin, optochin, STILL NEED novobiocin)
+- XXXXXXX Microbact strips 12A/12E
+- Gram-stain
+- Endospore stain
+- CAMP test
+- XXXXXXX Indole test
+
+ # Used agar plates
+- XXXXXXX Nutrient agar
+- Horse blood agar
+- XXXXXXX MacConkey agar
+- Bile esculin agar
+- Mannitol salt agar
+- XXXXXXX EMB agar
+- MYP agar
+- XXXXXXX Simmons’ Citrate agar
+- XXXXXXX XLD agar
+- XXXXXXX DNase agar
+- XXXXXXX Chocolate agar
+- XXXXXXX Sabouraud dextrose agar
+- XXXXXXX Pseudomonas Chromagar
+- XXXXXXX Candida Chromagar
+And further comments
+|
+}
+
+
 Samples -> Gram stain (+/-)
 Gram stain (+/-) -> Gram negative
 Gram stain (+/-) -> Gram positive
@@ -39,13 +75,18 @@ Horse Blood Agar (HBAcc) -> HBA beta-hemolytic
 HBA beta-hemolytic -> Bacitracin sensitivity
 Bacitracin sensitivity -> Sensitive to bacitracin
 Bacitracin sensitivity -> Resistant to bacitracin
-Resistant to bacitracin -> Group B/C Streptoccocus
+Resistant to bacitracin -> CAMP test (bt) -> Arrowhead of enhanced hemolysis at junction 
+CAMP test (bt) -> No enhanced hemolysis 
+No enhanced hemolysis -> Group C Streptococcus: finalized species
+Arrowhead of enhanced hemolysis at junction -> Group B Streptococcus: finalized species
+Group B Streptococcus.shape: diamond
+Group C Streptococcus.shape: diamond
+
+#The CAMP test is a specific test for differentiating GBS from GCS. It involves streaking #Streptococcus agalactiae perpendicularly to a streak of Staphylococcus aureus on sheep blood agar. A #positive result is indicated by an arrowhead-shaped zone of enhanced hemolysis at the junction of #the two streaks, caused by the synergistic action of the CAMP factor produced by GBS and the beta-#hemolysin produced by S. aureus.
 
 Sensitive to bacitracin -> Streptococcus pyogenes: finalized species
 Streptococcus pyogenes: {tooltip: confirm with Streptococcus grouping test}
 Streptococcus pyogenes.shape: diamond
-
-Horse Blood Agar (HBAcc): {tooltip: This step is just confirmatory, and can be skipped}
 
 Mannitol Salt Agar (MSA) (CC) -> No growth + no colour change (MSAcc)
 No growth + no colour change (MSAcc) -> Enterococcus faecium: finalized shape
