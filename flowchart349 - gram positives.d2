@@ -175,4 +175,47 @@ Corynebacterium spp: {tooltip: These can potentially be more easily identified b
 Corynebacterium spp.shape: diamond
 
 Negative (RC) -> Clostridium spp: finalized species
-Clostridium spp.shape: diamond
+Clostridium spp.shape: diamond\
+
+
+# gram negatives
+G- rods -> Oxidase test (rods)
+Oxidase test (rods) -> Positive oxidase test
+Oxidase test (rods) -> Negative oxidase test
+Negative oxidase test -> MacConkey agar (MCA)
+MacConkey agar (MCA) -> Pink colonies (MCA)
+MacConkey agar (MCA) -> White colonies (MCA)
+Pink colonies (MCA) -> EMB agar
+EMB agar -> Pink colonies (EMB)
+Pink colonies (EMB) -> Urease test (for pink EMB colonies)
+Urease test (for pink EMB colonies) -> Positive urease test
+Positive urease test -> Klebsiella oxytoca: finalized species
+Klebsiella oxytoca.shape: diamond
+Urease test (for pink EMB colonies) -> Negative urease test
+Negative urease test -> Enterobacter spp: finalized species
+Enterobacter spp.shape: diamond
+
+# citrobacter metallic green too??
+EMB agar -> Colonies with metallic green sheen (EMB)
+Colonies with metallic green sheen (EMB) -> Escherichia coli: finalized species
+Escherichia coli.shape: diamond
+White colonies (MCA) -> Nutrient Agar plate
+Nutrient Agar plate -> Swarming (no distinct colonies)
+Swarming (no distinct colonies) -> Proteus mirabilis: finalized species
+Proteus mirabilis.shape: diamond
+Nutrient Agar plate -> No Swarming
+No swarming -> Bile Esculin agar (BE)
+Bile Esculin agar (BE) -> Brown agar
+Bile Esculin agar (BE) -> Not Brown
+Brown agar -> Serratia marcescens: finalized species
+Serratia marcescens.shape: diamond
+Not Brown -> XLD agar
+XLD agar -> Red colonies
+XLD agar -> Colonies with dark center
+Red colonies -> Shigella dysenteriae: finalized species
+Shigella dysenteriae.shape: diamond
+Colonies with dark center -> Salmonella enterica: finalized species
+Salmonella enterica.shape: diamond
+
+# note: have another box: gram stain (+/-) -> no staining (for the mycobacteriums), use acid fast stain
+
