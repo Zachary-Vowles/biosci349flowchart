@@ -5,7 +5,7 @@ Tests: |md
 - Oxidase test
 - Catalase test
 - Coagulase test   
-- XXXXXXX  Urease test
+-  Urease test
 - XXXXXXX Capsule stain
 - XXXXXXX Germ tube test
 - Antibiotic discs (Bacitracin, optochin, STILL NEED novobiocin)
@@ -16,19 +16,19 @@ Tests: |md
 - XXXXXXX Indole test
 
  # Used agar plates
-- XXXXXXX Nutrient agar
+- Nutrient agar
 - Horse blood agar
-- XXXXXXX MacConkey agar
+- MacConkey agar
 - Bile esculin agar
 - Mannitol salt agar
-- XXXXXXX EMB agar
+- EMB agar
 - MYP agar
 - XXXXXXX Simmons’ Citrate agar
-- XXXXXXX XLD agar
+- XLD agar
 - XXXXXXX DNase agar
-- XXXXXXX Chocolate agar
+- Chocolate agar
 - XXXXXXX Sabouraud dextrose agar
-- XXXXXXX Pseudomonas Chromagar
+- Pseudomonas Chromagar
 - Candida Chromagar
 And further comments
 |
@@ -36,9 +36,13 @@ And further comments
 
 
 Samples -> Gram stain (+/-)
+Gram stain (+/-).style.font-size: 40
 Gram stain (+/-) -> Gram negative
+Gram negative.style.font-size: 35
 Gram stain (+/-) -> Gram positive
+Gram positive.style.font-size: 35
 Gram stain (+/-) -> Indefinite (perhaps no bacteria seen, or purple spots)
+Indefinite (perhaps no bacteria seen, or purple spots).style.font-size: 35
 Indefinite (perhaps no bacteria seen, or purple spots): {tooltip: as shown by https://thunderhouse4-yuri.blogspot.com/2010/09/mycobacterium-tuberculosis-in-gram.html - according to DOI: 10.3412/jsb.46.533. M.tb can sometimes be stained as Gram-positive, whereas M. leprae is unstainable (by Gram staining), this can change if heating of the bacteria is done before the procedure}
 
 Indefinite (perhaps no bacteria seen, or purple spots) -> Ziehl-Neelsen stain -> Less intense red-stain colour
@@ -51,12 +55,11 @@ Attempt growth on Lowenstein-Jensen medium or Middlebrook 7H10/7H11 agar -> No g
 Attempt growth on Lowenstein-Jensen medium or Middlebrook 7H10/7H11 agar: {tooltip: M. leprae is famously uncultivatible in artificial media, with success found only in humans, footpads of mice, and armadillos, PCR would be nice to use for this}
 
 Attempt growth on Lowenstein-Jensen medium or Middlebrook 7H10/7H11 agar -> Brown/light brown, dusty granular colonies (Mtb) -> Mycobacterium tuberculosis
-Brown granular colonies (Mtb): {tooltip: this will take four weeks so not really viable}
+Brown/light brown, dusty granular colonies (Mtb): {tooltip: this will take four weeks so not really viable}
 
 
 Mycobacterium leprae.shape: diamond
 Mycobacterium tuberculosis.shape: diamond
-Mycobacterium Leprae or Mycobacterium Tuberculosis.
 
 Gram positive -> G+ cocci
 Gram positive -> Budding yeasts
@@ -217,5 +220,60 @@ Shigella dysenteriae.shape: diamond
 Colonies with dark center -> Salmonella enterica: finalized species
 Salmonella enterica.shape: diamond
 
-# note: have another box: gram stain (+/-) -> no staining (for the mycobacteriums), use acid fast stain
 
+#Gram negative oxidase positive rods
+
+#Nutrient agar -> Green/blue pigment + straight rod + grows on Pseudomonas Chromagar with blue halo i.e., growth (Aeromonas, V. cholera, pseudomonas aeuronginase)
+Positive oxidase test -> Nutrient agar 
+Nutrient agar -> Growth (Ox+)
+Nutrient agar -> No growth (Ox+)
+
+No growth (Ox+) -> Chocolate agar -> Growth (Choc+) and straight rod (from original Gram stain)
+Growth (Choc+) and straight rod (from original gram stain) -> Haemophilus influenzae: finalized species
+Haemophilus influenzae.shape: diamond
+
+Chocolate agar -> No growth (Choc-) and curved rod (from original Gram stain) 
+No growth (Choc-) and curved rod (from original Gram stain) -> Vibrio fischeri: finalized species
+Vibrio fischeri.shape: diamond
+
+Growth (Ox+): {tooltip: Aeromonas grows on nutrient agar (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2754019/), as does Pseudomonas aeruginosa, as does V. cholera (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2754027/)}
+No growth (Ox+): {tooltip: Haemophilus will not grow (only chocolate agar), and V. fischeri will not grow without addition of salt, photobacterium agar/broth recommended or LBS agar (https://www.carolina.com/teacher-resources/Interactive/care-guide-vibrio-fischeri/tr23902.tr)}
+Growth (Ox+) -> Pseudomonas CHROMagar -> Blue halo 
+
+Pseudomonas CHROMagar -> White colourless colonies
+Pseudomonas CHROMagar: {tooltip: The composition is fairly similar to nutrient agar (peptone, salt, agar). We make the assumption that the colonies that grew on NA also can grow on Pseudomonas CHROMagar)}
+
+White colourless colonies -> Distinguish by original shape from gram stain
+Distinguish by original shape from gram stain -> Curved rod ()
+Curved rod () -> Vibrio cholera: finalized species
+Vibrio cholera.shape: diamond
+
+Distinguish by original shape from gram stain -> Straight rod ()
+Straight rod () -> Aeromonas spp: finalized species
+Aeromonas spp.shape: diamond
+
+
+Blue halo -> Pseudomonas aeruginosa: finalized species
+Pseudomonas aeruginosa.shape: diamond
+
+#Nutrient agar -> No growth (Haemophilus and V fischeri) -> Try chocolate agar -> Positive = Haemophilus, negative = vibrio fischeri ???
+
+#Aeromonas vs vibrios and pseudomonas
+#DNASE agar https://path.upmc.edu/cases/case792/dx.html yes for aeromonas
+#Fischeri is positive for DNASE https://journals.asm.org/doi/10.1128/aem.01635-22
+#Cholera also produces DNASEs https://pubmed.ncbi.nlm.nih.gov/1791765/
+#Pseudomonas typically not DNAse in culture
+
+
+Gram negative -> G- spirillum
+G- spirillum: {tooltip: Characteristic worm-like shape of the bacteria - could maybe be confused for Vibrio cholera/fischeri...}
+
+G- spirillum -> Urease test (G-sp) 
+Urease test (G-sp) -> Positive (G-sp)
+Positive (G-sp) -> Helicobacter pylori: finalized species
+Helicobacter pylori.shape: diamond
+Urease test (G-sp) -> Negative (G-sp)
+Negative (G-sp) -> Campylobacter jejuni: finalized species
+Campylobacter jejuni.shape: diamond
+
+Distinguish campylobacter and helicobacter
