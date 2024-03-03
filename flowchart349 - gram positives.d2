@@ -1,39 +1,37 @@
 Checklist: {
+  Tests: |md
+     # Used biochemical tests
+    - Oxidase test
+    - Catalase test
+    - Coagulase test   
+    -  Urease test
+    - XXXXXXX Capsule stain (done)
+    - Germ tube test
+    - Antibiotic discs (Bacitracin, optochin, novobiocin)
+    - XXXXXXX Microbact strips 12A/12E - dont have to include in flow chart..
+    - Gram-stain
+    - Endospore stain
+    - CAMP test
+    - XXXXXXX Indole test
 
-Tests: |md
- # Used biochemical tests
-- Oxidase test
-- Catalase test
-- Coagulase test   
--  Urease test
-- XXXXXXX Capsule stain
-- Germ tube test
-- Antibiotic discs (Bacitracin, optochin, novobiocin)
-- XXXXXXX Microbact strips 12A/12E
-- Gram-stain
-- Endospore stain
-- CAMP test
-- XXXXXXX Indole test
+     # Used agar plates
+    - Nutrient agar
+    - Horse blood agar
+    - MacConkey agar
+    - Bile esculin agar
+    - Mannitol salt agar
+    - EMB agar
+    - MYP agar
+    - XXXXXXX Simmons’ Citrate agar
+    - XLD agar
+    - XXXXXXX DNase agar (done)
+    - Chocolate agar
+    - Sabouraud dextrose agar
+    - Pseudomonas Chromagar
+    - Candida Chromagar
 
- # Used agar plates
-- Nutrient agar
-- Horse blood agar
-- MacConkey agar
-- Bile esculin agar
-- Mannitol salt agar
-- EMB agar
-- MYP agar
-- XXXXXXX Simmons’ Citrate agar
-- XLD agar
-- XXXXXXX DNase agar
-- Chocolate agar
-- Sabouraud dextrose agar
-- Pseudomonas Chromagar
-- Candida Chromagar
-
-|
+  |
 }
-
 
 Samples -> Gram stain (+/-)
 Gram stain (+/-).style.font-size: 40
@@ -41,14 +39,14 @@ Gram stain (+/-) -> Gram negative
 Gram negative.style.font-size: 35
 Gram stain (+/-) -> Gram positive
 Gram positive.style.font-size: 35
-Gram stain (+/-) -> Indefinite (perhaps no bacteria seen, or purple spots)
-Indefinite (perhaps no bacteria seen, or purple spots).style.font-size: 35
-Indefinite (perhaps no bacteria seen, or purple spots): {tooltip: as shown by https://thunderhouse4-yuri.blogspot.com/2010/09/mycobacterium-tuberculosis-in-gram.html - according to DOI: 10.3412/jsb.46.533. M.tb can sometimes be stained as Gram-positive, whereas M. leprae is unstainable (by Gram staining), this can change if heating of the bacteria is done before the procedure}
+Gram stain (+/-) -> Indefinite/no staining (perhaps no bacteria seen, or purple spots)
+Indefinite/no staining (perhaps no bacteria seen, or purple spots).style.font-size: 35
+Indefinite/no staining (perhaps no bacteria seen, or purple spots): {tooltip: as shown by https://thunderhouse4-yuri.blogspot.com/2010/09/mycobacterium-tuberculosis-in-gram.html - according to DOI: 10.3412/jsb.46.533. M.tb can sometimes be stained as Gram-positive, whereas M. leprae is unstainable (by Gram staining), this can change if heating of the bacteria is done before the procedure}
 
-Indefinite (perhaps no bacteria seen, or purple spots) -> Ziehl-Neelsen stain -> Less intense red-stain colour
-Ziehl-Neelsen stain -> More intense red-stain colour 
+Indefinite/no staining (perhaps no bacteria seen, or purple spots) -> Ziehl-Neelsen stain -> Less intense red-stain colour
+Ziehl-Neelsen stain -> More intense red-stain colour
 Less intense red-stain colour -> Mycobacterium leprae: finalized species
-More intense red-stain colour -> Mycobacterium tuberculosis:finalized species
+More intense red-stain colour -> Mycobacterium tuberculosis: finalized species
 Less intense red-stain colour: {tooltip: M. leprae is less acid fast than other microbacteria (https://www.sciencedirect.com/science/article/abs/pii/B978141604044650114X) leading to lower penetration of carbol-fuchsin}
 Ziehl-Neelsen stain -> Attempt growth on Lowenstein-Jensen medium or Middlebrook 7H10/7H11 agar
 Attempt growth on Lowenstein-Jensen medium or Middlebrook 7H10/7H11 agar -> No growth on LJ/Middlebrook -> Mycobacterium leprae
@@ -56,7 +54,6 @@ Attempt growth on Lowenstein-Jensen medium or Middlebrook 7H10/7H11 agar: {toolt
 
 Attempt growth on Lowenstein-Jensen medium or Middlebrook 7H10/7H11 agar -> Brown/light brown, dusty granular colonies (Mtb) -> Mycobacterium tuberculosis
 Brown/light brown, dusty granular colonies (Mtb): {tooltip: this will take four weeks so not really viable}
-
 
 Mycobacterium leprae.shape: diamond
 Mycobacterium tuberculosis.shape: diamond
@@ -66,8 +63,6 @@ Gram positive -> Budding yeasts
 Gram positive -> G+ rods
 Gram negative -> G- cocci
 Gram negative -> G- rods
-
-
 
 G+ cocci -> Cocci catalase test
 Cocci catalase test -> Positive (CC)
@@ -102,17 +97,18 @@ Horse Blood Agar (HBAcc) -> HBA beta-hemolytic
 HBA beta-hemolytic -> Bacitracin sensitivity
 Bacitracin sensitivity -> Sensitive to bacitracin
 Bacitracin sensitivity -> Resistant to bacitracin
-Resistant to bacitracin -> CAMP test (bt) -> Arrowhead of enhanced hemolysis at junction 
-CAMP test (bt) -> No enhanced hemolysis 
+Resistant to bacitracin -> CAMP test (bt) -> Arrowhead of enhanced hemolysis at junction
+CAMP test (bt) -> No enhanced hemolysis
 No enhanced hemolysis -> Group C Streptococcus: finalized species
 Arrowhead of enhanced hemolysis at junction -> Group B Streptococcus: finalized species
 Group B Streptococcus.shape: diamond
 Group C Streptococcus.shape: diamond
 
-CAMP test (bt):{ tooltip: The CAMP test is a specific test for differentiating GBS from GCS. It involves streaking Streptococcus agalactiae perpendicularly to a streak of Staphylococcus aureus on sheep blood agar. A positive result is indicated by an arrowhead-shaped zone of enhanced hemolysis at the junction of the two streaks, caused by the synergistic action of the CAMP factor produced by GBS and the beta-hemolysin produced by S. aureus.
+CAMP test (bt): {
+  tooltip: The CAMP test is a specific test for differentiating GBS from GCS. It involves streaking Streptococcus agalactiae perpendicularly to a streak of Staphylococcus aureus on sheep blood agar. A positive result is indicated by an arrowhead-shaped zone of enhanced hemolysis at the junction of the two streaks, caused by the synergistic action of the CAMP factor produced by GBS and the beta-hemolysin produced by S. aureus.
 }
 
-#The CAMP test is a specific test for differentiating GBS from GCS. It involves streaking #Streptococcus agalactiae perpendicularly to a streak of Staphylococcus aureus on sheep blood agar. A #positive result is indicated by an arrowhead-shaped zone of enhanced hemolysis at the junction of #the two streaks, caused by the synergistic action of the CAMP factor produced by GBS and the beta-#hemolysin produced by S. aureus.
+# The CAMP test is a specific test for differentiating GBS from GCS. It involves streaking #Streptococcus agalactiae perpendicularly to a streak of Staphylococcus aureus on sheep blood agar. A #positive result is indicated by an arrowhead-shaped zone of enhanced hemolysis at the junction of #the two streaks, caused by the synergistic action of the CAMP factor produced by GBS and the beta-#hemolysin produced by S. aureus.
 
 Sensitive to bacitracin -> Streptococcus pyogenes: finalized species
 Streptococcus pyogenes: {tooltip: confirm with Streptococcus grouping test}
@@ -136,25 +132,23 @@ Streptococcus pneumoniae.shape: diamond
 Optochin resistant -> Streptococcus mitis: finalized species
 Streptococcus mitis.shape: diamond
 
-G+ rods -> Endospore formation
-Endospore formation -> Negative (REf)
+G+ rods -> Endospore formation / endospore stain
+Endospore formation / endospore stain -> Negative (REf)
 
 Negative (REf) -> Motility test (wet mount)
 Motility test (wet mount) -> Non-motile (RMt)
-Motility test (wet mount) -> Motile (RMt) 
+Motility test (wet mount) -> Motile (RMt)
 
 Non-motile (RMt) -> Corynebacterium spp: finalized species
 Motile (RMt) -> Listeria monocytogenes: finalized species
 
-Endospore formation -> Positive (REf)
+Endospore formation / endospore stain -> Positive (REf)
 Positive (REf) -> Rod catalase test
 
-Negative (REf) -> Corynebacterium
 Listeria monocytogenes.shape: diamond
 
 Rod catalase test -> Positive (RC)
 Rod catalase test -> Negative (RC)
-
 
 Positive (RC) -> Mannitol-Egg-Yolk-Polymyxin (MYP) agar
 Mannitol-Egg-Yolk-Polymyxin (MYP) agar -> Pink colonies
@@ -165,14 +159,11 @@ Yellow colonies -> Bacillus subtilis: finalized species
 Bacillus cereus.shape: diamond
 Bacillus subtilis.shape: diamond
 
-
-
 Corynebacterium spp: {tooltip: These can potentially be more easily identified by their club-shape, but we aren't experienced microbiologists, hence the caution}
 Corynebacterium spp.shape: diamond
 
 Negative (RC) -> Clostridium spp: finalized species
 Clostridium spp.shape: diamond
-
 
 # gram negatives
 G- rods -> Oxidase test (rods)
@@ -213,11 +204,10 @@ Shigella dysenteriae.shape: diamond
 Colonies with dark center -> Salmonella enterica: finalized species
 Salmonella enterica.shape: diamond
 
+# Gram negative oxidase positive rods
 
-#Gram negative oxidase positive rods
-
-#Nutrient agar -> Green/blue pigment + straight rod + grows on Pseudomonas Chromagar with blue halo i.e., growth (Aeromonas, V. cholera, pseudomonas aeuronginase)
-Positive oxidase test -> Nutrient agar 
+# Nutrient agar -> Green/blue pigment + straight rod + grows on Pseudomonas Chromagar with blue halo i.e., growth (Aeromonas, V. cholera, pseudomonas aeuronginase)
+Positive oxidase test -> Nutrient agar
 Nutrient agar -> Growth (Ox+)
 Nutrient agar -> No growth (Ox+)
 
@@ -225,13 +215,13 @@ No growth (Ox+) -> Chocolate agar -> Growth (Choc+) and straight rod (from origi
 Growth (Choc+) and straight rod (from original gram stain) -> Haemophilus influenzae: finalized species
 Haemophilus influenzae.shape: diamond
 
-Chocolate agar -> No growth (Choc-) and curved rod (from original Gram stain) 
+Chocolate agar -> No growth (Choc-) and curved rod (from original Gram stain)
 No growth (Choc-) and curved rod (from original Gram stain) -> Vibrio fischeri: finalized species
 Vibrio fischeri.shape: diamond
 
 Growth (Ox+): {tooltip: Aeromonas grows on nutrient agar (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2754019/), as does Pseudomonas aeruginosa, as does V. cholera (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2754027/)}
 No growth (Ox+): {tooltip: Haemophilus will not grow (only chocolate agar), and V. fischeri will not grow without addition of salt, photobacterium agar/broth recommended or LBS agar (https://www.carolina.com/teacher-resources/Interactive/care-guide-vibrio-fischeri/tr23902.tr)}
-Growth (Ox+) -> Pseudomonas CHROMagar -> Blue halo 
+Growth (Ox+) -> Pseudomonas CHROMagar -> Blue halo
 
 Pseudomonas CHROMagar -> White colourless colonies
 Pseudomonas CHROMagar: {tooltip: The composition is fairly similar to nutrient agar (peptone, salt, agar). We make the assumption that the colonies that grew on NA also can grow on Pseudomonas CHROMagar)}
@@ -245,30 +235,27 @@ Distinguish by original shape from gram stain -> Straight rod ()
 Straight rod () -> Aeromonas spp: finalized species
 Aeromonas spp.shape: diamond
 
-
 Blue halo -> Pseudomonas aeruginosa: finalized species
 Pseudomonas aeruginosa.shape: diamond
 
-#Nutrient agar -> No growth (Haemophilus and V fischeri) -> Try chocolate agar -> Positive = Haemophilus, negative = vibrio fischeri ???
+# Nutrient agar -> No growth (Haemophilus and V fischeri) -> Try chocolate agar -> Positive = Haemophilus, negative = vibrio fischeri ???
 
-#Aeromonas vs vibrios and pseudomonas
-#DNASE agar https://path.upmc.edu/cases/case792/dx.html yes for aeromonas
-#Fischeri is positive for DNASE https://journals.asm.org/doi/10.1128/aem.01635-22
-#Cholera also produces DNASEs https://pubmed.ncbi.nlm.nih.gov/1791765/
-#Pseudomonas typically not DNAse in culture
-
+# Aeromonas vs vibrios and pseudomonas
+# DNASE agar https://path.upmc.edu/cases/case792/dx.html yes for aeromonas
+# Fischeri is positive for DNASE https://journals.asm.org/doi/10.1128/aem.01635-22
+# Cholera also produces DNASEs https://pubmed.ncbi.nlm.nih.gov/1791765/
+# Pseudomonas typically not DNAse in culture
 
 Gram negative -> G- spirillum
 G- spirillum: {tooltip: Characteristic worm-like shape of the bacteria - could maybe be confused for Vibrio cholera/fischeri...}
 
-G- spirillum -> Urease test (G-sp) 
+G- spirillum -> Urease test (G-sp)
 Urease test (G-sp) -> Positive (G-sp)
 Positive (G-sp) -> Helicobacter pylori: finalized species
 Helicobacter pylori.shape: diamond
 Urease test (G-sp) -> Negative (G-sp)
 Negative (G-sp) -> Campylobacter jejuni: finalized species
 Campylobacter jejuni.shape: diamond
-
 
 # updated yeasts stufff below
 Budding yeasts -> Sabouraud dextrose agar (SDA)
@@ -282,3 +269,17 @@ No germ tubes observed -> Candida Chromagar
 Candida Chromagar -> Mauve colonies
 Mauve colonies -> Candida glabrata: finalized species
 Candida glabrata.shape: diamond
+
+# G- cocci
+G- cocci -> DNAse agar
+DNAse agar -> Halo observed
+DNAse agar -> No halo observed
+Halo observed -> Moraxella cattharalis: finalized species
+Moraxella cattharalis.shape: diamond
+No halo observed -> Capsule stain
+Capsule stain -> No Capsule
+Capsule stain -> Capsule
+Capsule -> Neisseria meningitidis: finalized species
+Neisseria meningitidis.shape: diamond
+No Capsule -> Neisseria gonorrhoeae: finalized species
+Neisseria gonorrhoeae.shape: diamond
