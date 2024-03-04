@@ -5,14 +5,14 @@ Checklist: {
     - Catalase test
     - Coagulase test   
     -  Urease test
-    - XXXXXXX Capsule stain (done)
+    - Capsule stain (done)
     - Germ tube test
     - Antibiotic discs (Bacitracin, optochin, novobiocin)
     - XXXXXXX Microbact strips 12A/12E - dont have to include in flow chart..
     - Gram-stain
     - Endospore stain
     - CAMP test
-    - XXXXXXX Indole test
+    - Indole test
 
      # Used agar plates
     - Nutrient agar
@@ -22,9 +22,9 @@ Checklist: {
     - Mannitol salt agar
     - EMB agar
     - MYP agar
-    - XXXXXXX Simmons’ Citrate agar
+    - Simmons’ Citrate agar
     - XLD agar
-    - XXXXXXX DNase agar (done)
+    - DNase agar (done)
     - Chocolate agar
     - Sabouraud dextrose agar
     - Pseudomonas Chromagar
@@ -97,7 +97,8 @@ Horse Blood Agar (HBAcc) -> HBA beta-hemolytic
 HBA beta-hemolytic -> Bacitracin sensitivity
 Bacitracin sensitivity -> Sensitive to bacitracin
 Bacitracin sensitivity -> Resistant to bacitracin
-Resistant to bacitracin -> CAMP test (bt) -> Arrowhead of enhanced hemolysis at junction
+Resistant to bacitracin -> CAMP test (bt)
+CAMP test (bt) -> Arrowhead of enhanced hemolysis at junction
 CAMP test (bt) -> No enhanced hemolysis
 No enhanced hemolysis -> Group C Streptococcus: finalized species
 Arrowhead of enhanced hemolysis at junction -> Group B Streptococcus: finalized species
@@ -139,7 +140,7 @@ Negative (REf) -> Motility test (wet mount)
 Motility test (wet mount) -> Non-motile (RMt)
 Motility test (wet mount) -> Motile (RMt)
 
-Non-motile (RMt) -> Corynebacterium spp: finalized species
+Non-motile (RMt) -> Corynebacterium spp: finalized genus
 Motile (RMt) -> Listeria monocytogenes: finalized species
 
 Endospore formation / endospore stain -> Positive (REf)
@@ -162,7 +163,7 @@ Bacillus subtilis.shape: diamond
 Corynebacterium spp: {tooltip: These can potentially be more easily identified by their club-shape, but we aren't experienced microbiologists, hence the caution}
 Corynebacterium spp.shape: diamond
 
-Negative (RC) -> Clostridium spp: finalized species
+Negative (RC) -> Clostridium spp: finalized genus
 Clostridium spp.shape: diamond
 
 # gram negatives
@@ -172,6 +173,7 @@ Oxidase test (rods) -> Negative oxidase test
 Negative oxidase test -> MacConkey agar (MCA)
 MacConkey agar (MCA) -> Pink colonies (MCA)
 MacConkey agar (MCA) -> White colonies (MCA)
+White colonies (MCA): {tooltip: may also appear pale pink, as in the case of Yersinia enterolitica}
 Pink colonies (MCA) -> EMB agar
 EMB agar -> Pink colonies (EMB)
 Pink colonies (EMB) -> Urease test (for pink EMB colonies)
@@ -179,22 +181,57 @@ Urease test (for pink EMB colonies) -> Positive urease test
 Positive urease test -> Klebsiella oxytoca: finalized species
 Klebsiella oxytoca.shape: diamond
 Urease test (for pink EMB colonies) -> Negative urease test
-Negative urease test -> Enterobacter spp: finalized species
+Negative urease test -> Enterobacter spp: finalized genus
 Enterobacter spp.shape: diamond
 
 # citrobacter metallic green too??
-EMB agar -> Colonies with metallic green sheen (EMB)
-Colonies with metallic green sheen (EMB) -> Escherichia coli: finalized species
+EMB agar -> Colonies with metallic green sheen (~dark centre) (EMB)
+Colonies with metallic green sheen (~dark centre) (EMB): {tooltip: Citrobacter freundii has several results on images for the same metallic green colour, as well as a purple-y colour}
+
+Colonies with metallic green sheen (~dark centre) (EMB) -> Simmons' Citrate Agar
+Simmons' Citrate Agar -> Positive (blue)
+Positive (blue) -> Citrobacter freundii: finalized species
+Simmons' Citrate Agar -> Negative (green)
+Negative (green) -> Escherichia coli: finalized species
+
+Citrobacter freundii.shape: diamond
 Escherichia coli.shape: diamond
 White colonies (MCA) -> Nutrient Agar plate
+Nutrient Agar plate: {tooltip: Red colonies are typically indicate of Serratia marcescens}
+
 Nutrient Agar plate -> Swarming (no distinct colonies)
 Swarming (no distinct colonies) -> Proteus mirabilis: finalized species
 Proteus mirabilis.shape: diamond
 Nutrient Agar plate -> No Swarming
 No swarming -> Bile Esculin agar (BE)
-Bile Esculin agar (BE) -> Brown agar
-Bile Esculin agar (BE) -> Not Brown
-Brown agar -> Serratia marcescens: finalized species
+
+# Yersinia species spp
+Bile Esculin agar (BE) -> Brown/dark agar and red colonies on nutrient agar
+Bile Esculin agar (BE) -> Brown/dark agar 
+
+Brown/dark agar: {tooltip: at this point Yersinia spp could be deduced by elimination. The genus is so varied that the only tests with a single result are lysine, arginine and adonitol metabolism. The clinically relevant species, pestis, enterolitica, and pseudotuberculosis vary in terms of urease/indole tests, so really the only option is using CIN agar or non biochemical/agar tests like PCR etc.}
+Brown/dark agar -> Semi-solid media motility test at 37C
+
+Semi-solid media motility test at 37C -> Non-motile at 37C 
+Non-motile at 37C: {tooltip: Several Yersinia species are motile below 37C (i.e., enterolitica at 25C), but at or above 37C, they are non-motile (https://www.britannica.com/science/Yersinia), however, Serratia marcescens is still motile at this temperature (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3502906/)}
+Non-motile at 37C -> Yersinia spp: finalized genus
+Yersinia spp.shape: diamond
+Yersinia spp -> CIN agar confirmation
+Yersinia spp: {tooltip: Given that Yersinia pestis is the cause of the bubonic plague, we reason this would be too dangerous to bring into the lab}
+
+
+CIN agar confirmation -> Translucent with dark pink center and bile precipitate (bulls-eye colonies)
+Translucent with dark pink center and bile precipitate (bulls-eye colonies) -> Yersinia enterolitica: finalized species
+Yersinia enterolitica.shape: diamond
+Yersinia pseudotuberculosis.shape: diamond
+CIN agar confirmation -> Growth with dark pink center with bile precipitate - no transparent zone around the colonies
+
+Growth with dark pink center with bile precipitate - no transparent zone around the colonies -> Yersinia pseudotuberculosis: finalized species
+
+
+
+Bile Esculin agar (BE) -> Not brown
+Brown/dark agar and red colonies on nutrient agar -> Serratia marcescens: finalized species
 Serratia marcescens.shape: diamond
 Not Brown -> XLD agar
 XLD agar -> Red colonies
@@ -220,20 +257,28 @@ No growth (Choc-) and curved rod (from original Gram stain) -> Vibrio fischeri: 
 Vibrio fischeri.shape: diamond
 
 Growth (Ox+): {tooltip: Aeromonas grows on nutrient agar (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2754019/), as does Pseudomonas aeruginosa, as does V. cholera (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2754027/)}
-No growth (Ox+): {tooltip: Haemophilus will not grow (only chocolate agar), and V. fischeri will not grow without addition of salt, photobacterium agar/broth recommended or LBS agar (https://www.carolina.com/teacher-resources/Interactive/care-guide-vibrio-fischeri/tr23902.tr)}
+No growth (Ox+): {tooltip: Haemophilus will not grow (only chocolate agar, or enriched nutrient agar (NAD etc)), and V. fischeri will not grow without addition of salt, photobacterium agar/broth recommended or LBS agar (https://www.carolina.com/teacher-resources/Interactive/care-guide-vibrio-fischeri/tr23902.tr)}
 Growth (Ox+) -> Pseudomonas CHROMagar -> Blue halo
 
 Pseudomonas CHROMagar -> White colourless colonies
 Pseudomonas CHROMagar: {tooltip: The composition is fairly similar to nutrient agar (peptone, salt, agar). We make the assumption that the colonies that grew on NA also can grow on Pseudomonas CHROMagar)}
 
-White colourless colonies -> Distinguish by original shape from gram stain
-Distinguish by original shape from gram stain -> Curved rod ()
-Curved rod () -> Vibrio cholera: finalized species
+White colourless colonies 
 Vibrio cholera.shape: diamond
+White colourless colonies -> Indole test (White) -> Negative (In-)
 
-Distinguish by original shape from gram stain -> Straight rod ()
-Straight rod () -> Aeromonas spp: finalized species
-Aeromonas spp.shape: diamond
+Indole test (White) -> Positive (In+)
+
+Positive (In+) -> Bile esculin agar (In+)
+ 
+Bile esculin agar (In+) -> Brown/black growth on plate 
+Brown/black growth on plate -> Aeromonas hydrophila/caviae: finalized species
+Aeromonas hydrophila/caviae.shape: diamond
+
+Bile esculin agar (In+) -> No blackening
+No blackening -> Vibrio cholera: finalized species
+Negative (In-) -> Aeromonas salmonicida
+Aeromonas salmonicida.shape: diamond
 
 Blue halo -> Pseudomonas aeruginosa: finalized species
 Pseudomonas aeruginosa.shape: diamond
